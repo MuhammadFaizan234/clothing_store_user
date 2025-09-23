@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "satoshi-regular";
+  src: url(../assets/fonts/Satoshi-Regular.otf);
+}
+@font-face {
+  font-family: "satoshi-bold";
+  src: url(../assets/fonts/Satoshi-Bold.otf);
+}
+@font-face {
+  font-family: "integralcf-bold";
+  src: url(../assets/fonts/Fontspring-DEMO-integralcf-bold.otf);
+}
+
+p {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "integralcf-bold";
+}
+h4,
+h5,
+h6 {
+  font-family: "satoshi-bold";
+}
+p {
+  font-family: "satoshi-regular";
+}
+
+.alert {
+  background-color: black;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 0px;
+  padding: 4px;
+}
+.btn-close {
+  padding: 0.5rem 1rem !important;
+}
+input[type="search"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("../assets/image/magnifying-glass-solid.svg");
+  background-size: 26px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
