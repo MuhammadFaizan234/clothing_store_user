@@ -7,8 +7,8 @@ function Header() {
             className="alert text-center alert-warning alert-dismissible fade show mb-0"
             role="alert"
           >
-            <p>
-              Sign up and get 20% off to your first order.{" "}
+            <p className="mb-0">
+              Sign up and get 20% off to your first order.
               <span className="text-decoration-underline">Sign Up Now</span>
             </p>
             <button
@@ -21,13 +21,13 @@ function Header() {
         </div>
       </div>
 
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <h4 className="fw-bolder">SHOP.CO</h4>
+      <nav className="navbar navbar-expand-lg mt-2">
+        <div className="container">
+          <a className="navbar-brand" href="#">
+            <h3 className="fw-bolder">SHOP.CO</h3>
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -35,34 +35,42 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
                   On Sale
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
                   New Arrivals
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
                   Brand
                 </a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form className="d-flex" role="search">
               <input
-                class="form-control me-2"
+                className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
             </form>
+            <div className="icon ms-4">
+              <a href="#" className="text-decoration-none text-black">
+                <i className="fa-solid fa-cart-shopping"></i>
+              </a>
+              <a href="#" className="text-decoration-none text-black">
+                <i className="fa-regular fa-circle-user ms-4"></i>
+              </a>
+            </div>
           </div>
         </div>
       </nav>

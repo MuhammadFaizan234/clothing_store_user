@@ -11,9 +11,10 @@
   src: url(../assets/fonts/Fontspring-DEMO-integralcf-bold.otf);
 }
 
-p {
-  padding: 0px !important;
-  margin: 0px !important;
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "satoshi-regular";
 }
 
 h1,
@@ -25,9 +26,6 @@ h4,
 h5,
 h6 {
   font-family: "satoshi-bold";
-}
-p {
-  font-family: "satoshi-regular";
 }
 
 .alert {
@@ -41,15 +39,41 @@ p {
   padding: 0.5rem 1rem !important;
 }
 input[type="search"] {
-  width: 100%;
+  width: 24rem;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 30px;
   font-size: 16px;
   background-color: white;
-  background-image: url("../assets/image/magnifying-glass-solid.svg");
-  background-size: 26px;
-  background-position: 10px 10px;
+  background-image: url("../assets/image/Vector\ \(1\).svg");
+  background-size: 18px;
+  background-position: 10px 7px;
   background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
+  padding: 4px 11px 4px 40px;
+  margin-left: 2rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+}
+
+input[type="email"] {
+  width: 16rem;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("../assets/image/Frame\ \(1\).svg");
+  background-size: 18px;
+  background-position: 10px 7px;
+  background-repeat: no-repeat;
+  padding: 4px 11px 4px 31px;
+}
+
+.outline-none {
+  outline: none;
+}
+.bg-custom {
+  background-color: #f0f0f0;
 }
