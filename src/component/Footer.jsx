@@ -1,5 +1,4 @@
 function Footer() {
-  // eslint-disable-next-line no-undef
   const company = ["About", "Features", "Works", "Career"];
   const Help = [
     "Customer Support",
@@ -72,7 +71,6 @@ function Footer() {
                         href="#"
                         className="text-decoration-none d-block text-black"
                       >
-                        {console.log(com)}
                         <p>{com}</p>
                       </a>
                     </div>
@@ -90,7 +88,6 @@ function Footer() {
                         href="#"
                         className="text-decoration-none d-block text-black"
                       >
-                        {console.log(com)}
                         <p>{com}</p>
                       </a>
                     </div>
@@ -108,7 +105,6 @@ function Footer() {
                         href="#"
                         className="text-decoration-none d-block text-black"
                       >
-                        {console.log(com)}
                         <p>{com}</p>
                       </a>
                     </div>
@@ -126,7 +122,6 @@ function Footer() {
                         href="#"
                         className="text-decoration-none d-block text-black"
                       >
-                        {console.log(com)}
                         <p>{com}</p>
                       </a>
                     </div>

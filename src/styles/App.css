@@ -11,7 +11,7 @@
   src: url(../assets/fonts/Fontspring-DEMO-integralcf-bold.otf);
 }
 @font-face {
-  font-family: "integralcf-medium";
+  font-family: "satoshi-medium";
   src: url(../assets/fonts/Satoshi-Medium.otf);
 }
 
@@ -31,7 +31,10 @@ h5 {
   font-family: "satoshi-bold";
 }
 h6 {
-  font-family: "integralcf-medium";
+  font-family: "satoshi-medium";
+}
+.satoshi-medium {
+  font-family: "satoshi-medium";
 }
 .alert {
   background-color: black;
@@ -121,4 +124,59 @@ input[type="email"] {
 }
 .ms-6 {
   margin-left: 7.8rem;
+}
+header {
+  background-image: url(/image/Component.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fs-7 {
+  font-size: 0.69rem;
+}
+.fs-0 {
+  font-size: 0.87rem;
+}
+.fs-8 {
+  font-size: 0.8rem;
+}
+
+.btn-dark {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  border-radius: 3rem !important;
+  margin-bottom: 2rem !important;
+}
+.bg-danger {
+  --bs-bg-opacity: 0.3;
+}
+.fs-9 {
+  font-size: 15px;
+}
+.w-custom {
+  max-width: 58rem;
+}
+.bg-1 {
+  background-image: url("/image/Frame61.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-2 {
+  background-image: url("/image/Frame62.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-3 {
+  background-image: url("/image/Frame64.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-4 {
+  background-image: url("/image/Frame63.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
