@@ -1,8 +1,52 @@
 import Footer from "../component/Footer.jsx";
 import Header from "../component/Header.jsx";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useRef } from "react";
+import Stars1 from "../component/Stars1.jsx";
 import Stars from "../component/Stars.jsx";
 
 function Home() {
+  const slider = useRef(null);
+  // let owl = $(".owl-carousel");
+  const option = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    marrgin: "10px",
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   const card = [
     {
       img: "/image/Frame32.png",
@@ -59,6 +103,50 @@ function Home() {
       title: "FADED SKINNY JEANS",
       stars: "4.5",
       realprise: "210",
+    },
+  ];
+  const review = [
+    {
+      stars: "5",
+      verifid: true,
+      title: "Sarah M.",
+      paragraph:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+    },
+    {
+      stars: "5",
+      verifid: true,
+      title: "Alex K.",
+      paragraph:
+        "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
+    },
+    {
+      stars: "5",
+      verifid: true,
+      title: "Sarah M.",
+      paragraph:
+        "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
+    },
+    {
+      stars: "5",
+      verifid: true,
+      title: "Sarah M.",
+      paragraph:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+    },
+    {
+      stars: "5",
+      verifid: true,
+      title: "Sarah M.",
+      paragraph:
+        "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
+    },
+    {
+      stars: "5",
+      verifid: true,
+      title: "Alex K.",
+      paragraph:
+        "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
     },
   ];
 
@@ -240,10 +328,56 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="customer">
+      <div className="customer mb-5 PB-5">
         <div className="container">
           <div className="row">
-            
+            <div className="text mt-5 pt-5">
+              <h1>OUR HAPPY CUSTOMERS</h1>
+              <div
+                style={{
+                  display: "flex",
+                }}
+              >
+                <h6
+                  className="2 pe-3"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => slider.current.slickPrev()}
+                >
+                  <i className="fas fa-arrow-left #0000" />
+                </h6>
+                <h6
+                  className="1"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => slider.current.slickNext()}
+                >
+                  <i className="fas fa-arrow-right #0000" />
+                </h6>
+              </div>
+            </div>
+
+            <div className="">
+              <Slider ref={slider} {...option}>
+                {review.map((d, i) => {
+                  return (
+                    <>
+                      <div className="me-4 border ps-2 pe-2 rounded-4" key={i}>
+                        <Stars1 star={d.stars} className="fs-8" />
+                        <h4 className="fs-6 ms-2">
+                          {d.title}
+                          <span>
+                            <i
+                              class="fa-solid fa-circle-check fs-6"
+                              style={{ color: "#28a745" }}
+                            ></i>
+                          </span>
+                        </h4>
+                        <p className="fs-7 ms-2">{d.paragraph}</p>
+                      </div>
+                    </>
+                  );
+                })}
+              </Slider>
+            </div>
           </div>
         </div>
       </div>
