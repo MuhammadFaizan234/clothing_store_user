@@ -185,3 +185,33 @@ header {
   justify-content: space-between;
   padding: 0px 10px;
 }
+
+@media screen and (max-width: 767px) {
+  .fs-sm-1 {
+    font-size: 2.5rem;
+  }
+  .fs-7 {
+    font-size: 1rem;
+  }
+  .btn-dark {
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fs-29 {
+    font-size: 13px;
+  }
+  .alert-dismissible .btn-close {
+    top: -1px;
+    right: -18px;
+    font-size: 13px;
+  }
+  .p-custom {
+    padding: 20px !important;
+    font-size: 1.9rem !important;
+  }
+}

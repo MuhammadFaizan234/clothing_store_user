@@ -13,13 +13,11 @@ function Home() {
   const option = {
     dots: false,
     arrows: false,
-    infinite: true,
-    marrgin: "10px",
+    infinite: true, // Set default infinite behavior (or false, based on your preference)
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    cssEase: "linear",
+    // Add default slidesToShow and slidesToScroll for desktop
+    slidesToShow: 4, // Assuming you want 4 visible on large screens
+    slidesToScroll: 4, // Assuming you scroll 4 at a time
     responsive: [
       {
         breakpoint: 1024,
@@ -27,6 +25,7 @@ function Home() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
+          dots: false,
         },
       },
       {
@@ -34,11 +33,17 @@ function Home() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
         },
       },
       {
         breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 0,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -157,7 +162,9 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-5 text-black">
-              <h1 className="pt-5">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+              <h1 className="pt-5 fs-sm-1">
+                FIND CLOTHES THAT MATCHES YOUR STYLE
+              </h1>
               <p className="fs-7">
                 Browse through our diverse range of meticulously crafted
                 garments, designed to bring out your individuality and cater to
@@ -167,15 +174,15 @@ function Home() {
             </div>
           </div>
           <div className="row pb-5">
-            <div className="col-md-2 mb-4 border-end">
+            <div className="col-md-2 col-sm-6 col-6 mb-4 border-end text-center">
               <h4 className="fs-3">200+</h4>
               <p className="fs-0">International Brands</p>
             </div>
-            <div className="col-md-2 mb-4 border-end">
+            <div className="col-md-2 mb-4 col-sm-2 col-6 text-center border-end">
               <h4 className="fs-3">2,000+</h4>
               <p className="fs-0">High-Quality Products</p>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 align-items-center col text-center">
               <h4 className="fs-3">30,000+</h4>
               <p className="fs-0">Happy Customers</p>
             </div>
@@ -185,19 +192,19 @@ function Home() {
       <div className="brand bg-black">
         <div className="container">
           <div className="row pt-4 pb-4">
-            <div className="col gx-5">
+            <div className="col-sm-2 col-4 gx-5 text-center">
               <img src="/image/Group3.png" className="img-fluid" alt="" />
             </div>
-            <div className="col gx-5">
+            <div className="col-sm-2 col-4 gx-5 text-center">
               <img src="/image/Group4.png" className="img-fluid" alt="" />
             </div>
-            <div className="col gx-5">
+            <div className="col-sm-2 col-4 gx-5 text-center">
               <img src="/image/Group1.png" className="img-fluid" alt="" />
             </div>
-            <div className="col gx-5">
+            <div className="col-sm-2 col-6 pt-3 pt-sm-0 gx-5 text-center">
               <img src="/image/Group2.png" className="img-fluid" alt="" />
             </div>
-            <div className="col gx-5">
+            <div className="col-sm-2 col-6 pt-3 pt-sm-0 gx-5 text-center">
               <img src="/image/Group.png" className="img-fluid" alt="" />
             </div>
           </div>
@@ -209,36 +216,30 @@ function Home() {
             <h1 className="text-center mb-5 mt-5">NEW ARRIVALS</h1>
             {card.map((d, i) => {
               return (
-                <>
-                  <div className="col-md-3 d-inline">
-                    <div
-                      className="card border-0"
-                      key={i}
-                      style={{ width: "auto" }}
-                    >
-                      <img src={d.img} alt="" />
-                      <div className="card-body fs-9 ps-0">
-                        <div className="card-title">
-                          <h5 className="fs-8">{d.title}</h5>
-                          <Stars star={d.stars} />
-                          {d.secondprice ? (
-                            <h4>
-                              ${d.realprise}{" "}
-                              <span className="text-secondary text-decoration-line-through">
-                                ${d.secondprice}
-                              </span>
-                              <span className="fs-8 text-danger bg-danger rounded-5 p-1 ms-1 satoshi-medium">
-                                -{d.discount}%
-                              </span>
-                            </h4>
-                          ) : (
-                            <h4>${d.realprise}</h4>
-                          )}
-                        </div>
+                <div className="col-6 col-md-3 d-inline" key={i}>
+                  <div className="card border-0" style={{ width: "auto" }}>
+                    <img src={d.img} alt="" />
+                    <div className="card-body fs-9 ps-0">
+                      <div className="card-title">
+                        <h5 className="fs-8">{d.title}</h5>
+                        <Stars star={d.stars} />
+                        {d.secondprice ? (
+                          <h4>
+                            ${d.realprise}{" "}
+                            <span className="text-secondary text-decoration-line-through">
+                              ${d.secondprice}
+                            </span>
+                            <span className="fs-8 text-danger bg-danger rounded-5 p-1 ms-1 satoshi-medium">
+                              -{d.discount}%
+                            </span>
+                          </h4>
+                        ) : (
+                          <h4>${d.realprise}</h4>
+                        )}
                       </div>
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
             <a
@@ -257,7 +258,7 @@ function Home() {
             {top.map((d, i) => {
               return (
                 <>
-                  <div className="col-md-3 d-inline">
+                  <div className="col-6 col-md-3 d-inline">
                     <div
                       className="card border-0"
                       key={i}
@@ -304,7 +305,7 @@ function Home() {
           </div>
           <div className="row pb-4">
             <div className="col-md-5">
-              <div className="bg-1 rounded-4 pb-5">
+              <div className="bg-1 rounded-4 pb-5 mb-4 mb-sm-0">
                 <h4 className="fs-2 pt-4 ps-3 mb-5 pb-5">Casual</h4>
               </div>
             </div>
@@ -316,7 +317,7 @@ function Home() {
           </div>
           <div className="row pb-4">
             <div className="col-md-7">
-              <div className="bg-3 rounded-4 pb-5">
+              <div className="bg-3 rounded-4 pb-5 mb-4 mb-sm-0">
                 <h4 className="fs-2 pt-4 ps-3 mb-5 pb-5">Party</h4>
               </div>
             </div>
@@ -359,21 +360,19 @@ function Home() {
               <Slider ref={slider} {...option}>
                 {review.map((d, i) => {
                   return (
-                    <>
-                      <div className="me-4 border ps-2 pe-2 rounded-4" key={i}>
-                        <Stars1 star={d.stars} className="fs-8" />
-                        <h4 className="fs-6 ms-2">
-                          {d.title}
-                          <span>
-                            <i
-                              class="fa-solid fa-circle-check fs-6"
-                              style={{ color: "#28a745" }}
-                            ></i>
-                          </span>
-                        </h4>
-                        <p className="fs-7 ms-2">{d.paragraph}</p>
-                      </div>
-                    </>
+                    <div className="me-4 border ps-2 pe-2 rounded-4" key={i}>
+                      <Stars1 star={d.stars} className="fs-8" />
+                      <h4 className="fs-6 ms-2">
+                        {d.title}
+                        <span>
+                          <i
+                            className="fa-solid fa-circle-check fs-6"
+                            style={{ color: "#28a745" }}
+                          ></i>
+                        </span>
+                      </h4>
+                      <p className="fs-7 ms-2">{d.paragraph}</p>
+                    </div>
                   );
                 })}
               </Slider>
