@@ -186,6 +186,19 @@ header {
   padding: 0px 10px;
 }
 
+.accordion-item {
+  border: none;
+}
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn-dark {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+}
+
 @media screen and (max-width: 767px) {
   .fs-sm-1 {
     font-size: 2.5rem;
