@@ -41,10 +41,36 @@ function Header() {
           </span>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   On Sale
                 </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Man
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Woman
+                    </a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/product">
+                      Product
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -57,9 +83,9 @@ function Header() {
                 </a>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            <form className="" role="search">
               <input
-                className="form-control me-2 d-none"
+                className="form-control me-2 d-none d-lg-inline-block"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -67,14 +93,17 @@ function Header() {
             </form>
           </div>
           <div className="icon ms-4">
-            <a href="#" className="text-decoration-none text-black">
-              <i className="fa fa-search fs-2"></i>
+            <a
+              href="#"
+              className="text-decoration-none text-black d-sm-none d-sm-inline-block"
+            >
+              <i className="fa fa-search fs-4"></i>
             </a>
             <a href="#" className="text-decoration-none text-black">
-              <i className="fa-solid fa-cart-shopping ms-2 fs-2"></i>
+              <i className="fa-solid fa-cart-shopping ms-2 fs-4"></i>
             </a>
             <a href="#" className="text-decoration-none text-black">
-              <i className="fa-regular fa-circle-user ms-2 fs-2"></i>
+              <i className="fa-regular fa-circle-user ms-2 fs-4"></i>
             </a>
           </div>
         </div>
