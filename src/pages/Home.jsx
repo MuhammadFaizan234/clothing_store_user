@@ -360,7 +360,10 @@ function Home() {
               <Slider ref={slider} {...option}>
                 {review.map((d, i) => {
                   return (
-                    <div className="me-4 border ps-2 pe-2 rounded-4" key={i}>
+                    <div
+                      className="me-4 border ps-2 pe-2 rounded-4 w-auto d-inline-block"
+                      key={i}
+                    >
                       <Stars1 star={d.stars} className="fs-8" />
                       <h4 className="fs-6 ms-2">
                         {d.title}

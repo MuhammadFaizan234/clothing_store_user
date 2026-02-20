@@ -20,7 +20,7 @@ function Footer() {
         <div className="bg-black text-white rounded-4">
           <div className="row">
             <div className="col-12 col-md-7">
-              <h3 className="fs-2 ps-5 ms-2 py-4 p-custom">
+              <h3 className="fs-1 ps-5 ms-2 py-4 p-custom">
                 STAY UPTO DATE ABOUT OUR LATEST OFFERS
               </h3>
             </div>
@@ -30,11 +30,11 @@ function Footer() {
                 name="email"
                 id="email"
                 placeholder="Enter your email address"
-                className="border-0 outline-none mt-sm-4 d-block mx-auto"
+                className="border-0 w-85 outline-none mt-sm-4 d-block mx-auto"
               />
               <button
                 href="#"
-                className="btn btn-light mt-2 px-5 rounded-5 d-block mx-auto mb-3 mb-sm-0"
+                className="btn btn-light py-2 w-85 mt-2 px-5 rounded-5 d-block mx-auto mb-3 mb-sm-0"
               >
                 Subscribe to Newsletter
               </button>
@@ -136,12 +136,12 @@ function Footer() {
           <hr />
           <div className="row pb-5">
             <div className="col-md-6">
-              <p className="text-center">
+              <p className="text-start">
                 Shop.co © 2000-2023, All Rights Reserved
               </p>
             </div>
             <div className="col-md-6">
-              <div className="img ms-sm-6 ms-1">
+              <div className="img ms-sm-6 text-end ms-1">
                 <img src="/image/Badge.svg" className="fs-1" alt="" />
                 <img src="/image/Badge1.svg" alt="" />
                 <img src="/image/Badge2.svg" alt="" />

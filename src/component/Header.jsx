@@ -49,7 +49,7 @@ function Header() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  On Sale
+                  Shop
                 </a>
                 <ul class="dropdown-menu">
                   <li>
@@ -62,15 +62,12 @@ function Header() {
                       Woman
                     </a>
                   </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/casual">
-                      Casual
-                    </a>
-                  </li>
                 </ul>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/casual">
+                  On Sale
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -99,10 +96,10 @@ function Header() {
             >
               <i className="fa fa-search fs-4"></i>
             </a>
-            <a href="#" className="text-decoration-none text-black">
+            <a href="/cart" className="text-decoration-none text-black">
               <i className="fa-solid fa-cart-shopping ms-2 fs-4"></i>
             </a>
-            <a href="#" className="text-decoration-none text-black">
+            <a href="/profile" className="text-decoration-none text-black">
               <i className="fa-regular fa-circle-user ms-2 fs-4"></i>
             </a>
           </div>
